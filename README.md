@@ -10,7 +10,7 @@ make certs
 
 2. then, run `mkcert [FQDN]` to generate the certs for the domain
 ```
-mkcert devshibd.okayama-u.ac.jp
+mkcert devgenec.okayama-u.ac.jp
 ```
 
 
@@ -19,14 +19,14 @@ mkcert devshibd.okayama-u.ac.jp
 make up
 ```
 
-4. access the service at [`https://devshibd.okayama-u.ac.jp`](https://devshibd.okayama-u.ac.jp). you may need to add the following to your `/etc/hosts` file
+4. access the service at [`https://devgenec.okayama-u.ac.jp`](https://devgenec.okayama-u.ac.jp). you may need to add the following to your `/etc/hosts` file
 ```bash
-127.0.0.1 devshibd.okayama-u.ac.jp
+127.0.0.1 devgenec.okayama-u.ac.jp
 ```
 
-5. get Metadata from [`https://devshibd.okayama-u.ac.jp/Shibboleth.sso/Metadata`](https://devshibd.okayama-u.ac.jp/Shibboleth.sso/Metadata)
+5. get Metadata from [`https://devgenec.okayama-u.ac.jp/Shibboleth.sso/Metadata`](https://devgenec.okayama-u.ac.jp/Shibboleth.sso/Metadata)
 6. upload Metadata to Shibboleth IdP
-7. access the service at [`https://devshibd.okayama-u.ac.jp`](https://devshibd.okayama-u.ac.jp) again
+7. access the service at [`https://devgenec.okayama-u.ac.jp`](https://devgenec.okayama-u.ac.jp) again
 
 ## license
 Copyright (c) 2023 R74

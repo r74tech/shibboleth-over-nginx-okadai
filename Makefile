@@ -7,7 +7,7 @@ IMAGE_NAME := shibboleth-sp-keygen
 # Dockerfile path
 DOCKERFILE_PATH := sp-certs
 
-SPURL := devshibd.okayama-u.ac.jp
+SPURL := devgenec.okayama-u.ac.jp
 
 certs:
 	@if [ -e $(CERTS_DIR)/server-cert.pem ]; then \

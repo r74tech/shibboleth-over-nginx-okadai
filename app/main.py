@@ -15,7 +15,7 @@ def shibboleth(request: Request):
         "systemid": request.headers["systemid"],
         # "okadaiid": request.headers["okadaiid"],
         # "userclass": request.headers["userclass"],
-        "username": request.headers["username"].encode('latin-1').decode('utf-8'),
+        "username": request.headers["username"].encode("latin-1").decode("utf-8"),
         "email": request.headers["email"],
         "studentNO": request.headers["studentNO"],
         # "staffNO": request.headers["staffNO"],
