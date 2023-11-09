@@ -11,8 +11,8 @@ WORKDIR $APP_HOME
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 
 # 必要な証明書をコピー
-COPY ./certs/devgenec.okayama-u.ac.jp.pem /etc/nginx/cert.pem
-COPY ./certs/devgenec.okayama-u.ac.jp-key.pem /etc/nginx/key.pem
+COPY ./certs/devshibd.okayama-u.ac.jp.pem /etc/nginx/cert.pem
+COPY ./certs/devshibd.okayama-u.ac.jp-key.pem /etc/nginx/key.pem
 
 COPY ./shibboleth/server-cert.pem /etc/shibboleth/cert/server.crt
 COPY ./shibboleth/server-key.pem /etc/shibboleth/cert/server.key

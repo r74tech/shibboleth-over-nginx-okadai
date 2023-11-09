@@ -11,12 +11,12 @@
 
     <RequestMapper type="Native">
         <RequestMap applicationId="default">
-            <Host name="devgenec.okayama-u.ac.jp" authType="shibboleth" requireSession="true"/>
+            <Host name="devshibd.okayama-u.ac.jp" authType="shibboleth" requireSession="true"/>
         </RequestMap>
     </RequestMapper>
 
     <!-- The ApplicationDefaults element is where most of Shibboleth's SAML bits are defined. -->
-    <ApplicationDefaults entityID="https://devgenec.okayama-u.ac.jp/shibboleth" REMOTE_USER="systemid okadaiid userclass username email studentNO staffNO" cipherSuites="DEFAULT:!EXP:!LOW:!aNULL:!eNULL:!DES:!IDEA:!SEED:!RC4:!3DES:!kRSA:!SSLv2:!SSLv3:!TLSv1:!TLSv1.1">
+    <ApplicationDefaults entityID="https://devshibd.okayama-u.ac.jp/shibboleth" REMOTE_USER="systemid okadaiid userclass username email studentNO staffNO" cipherSuites="DEFAULT:!EXP:!LOW:!aNULL:!eNULL:!DES:!IDEA:!SEED:!RC4:!3DES:!kRSA:!SSLv2:!SSLv3:!TLSv1:!TLSv1.1">
 
         <!--
         Controls session lifetimes, address checks, cookie handling, and the protocol handlers.
