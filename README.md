@@ -1,4 +1,4 @@
-# shibboleth-overnginx-okadai
+# shibboleth-over-nginx-okadai
 
 ## description
 
