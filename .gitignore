@@ -177,3 +177,4 @@ pyrightconfig.json
 
 sp/certs/*
 sp/shibboleth/*.pem
+!sp/certs/.gitkeep
