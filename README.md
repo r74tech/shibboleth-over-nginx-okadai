@@ -12,9 +12,12 @@ make certs
 make up
 ```
 
-3. access the service at `https://sp.example.org`. you may need to add the following to your `/etc/hosts` file
+3. access the service at `https://devgenec.okayama-u.ac.jp`. you may need to add the following to your `/etc/hosts` file
 ```bash
-127.0.0.1 sp.example.org
+127.0.0.1 devgenec.okayama-u.ac.jp
+```
+```
+mkcert devgenec.okayama-u.ac.jp
 ```
 
 ## license

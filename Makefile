@@ -7,10 +7,10 @@ IMAGE_NAME := shibboleth-sp-keygen
 # Dockerfile path
 DOCKERFILE_PATH := sp-certs
 
-SPURL := sp.example.org
+SPURL := devgenec.okayama-u.ac.jp
 
 certs:
-	@if [ -e $(CERTS_DIR)/sp-encrypt-cert.pem ]; then \
+	@if [ -e $(CERTS_DIR)/server-cert.pem ]; then \
 		read -p "certs already exists. overwrite? [y/N]: " yn; \
 		case $$yn in \
 			[Yy]* ) \
@@ -26,14 +26,11 @@ certs:
 	@docker build $(DOCKERFILE_PATH) -t $(IMAGE_NAME)
 	@echo "generating certs..."
 	@docker run $(IMAGE_NAME) sh -c "\
-./keygen.sh -h $(SPURL) -y 10 -e https://$(SPURL)/shibboleth -n sp-signing && \
-./keygen.sh -h $(SPURL) -y 10 -e https://$(SPURL)/shibboleth -n sp-encrypt"
+./keygen.sh -h $(SPURL) -y 10 -e https://$(SPURL)/shibboleth -n server"
 
 	@echo "copying certs..."
-	@docker cp $$(docker ps -lq):/sp-certs/sp-encrypt-cert.pem $(CERTS_DIR)
-	@docker cp $$(docker ps -lq):/sp-certs/sp-encrypt-key.pem $(CERTS_DIR)
-	@docker cp $$(docker ps -lq):/sp-certs/sp-signing-cert.pem $(CERTS_DIR)
-	@docker cp $$(docker ps -lq):/sp-certs/sp-signing-key.pem $(CERTS_DIR)
+	@docker cp $$(docker ps -lq):/sp-certs/server-cert.pem $(CERTS_DIR)
+	@docker cp $$(docker ps -lq):/sp-certs/server-key.pem $(CERTS_DIR)
 	@echo "done."
 	
 up:
