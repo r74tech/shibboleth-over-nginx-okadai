@@ -12,11 +12,15 @@ def shibboleth(request: Request):
     shibboleth = {
         "auth_type": request.headers["auth_type"],
         "remote_user": request.headers["remote_user"],
+        "systemid": request.headers["systemid"],
+        # "okadaiid": request.headers["okadaiid"],
+        # "userclass": request.headers["userclass"],
+        "username": request.headers["username"].encode('latin-1').decode('utf-8'),
+        "email": request.headers["email"],
+        "studentNO": request.headers["studentNO"],
+        # "staffNO": request.headers["staffNO"],
         "shib-handler": request.headers["shib-handler"],
         "shib-identity-provider": request.headers["shib-identity-provider"],
-        "displayname": request.headers["displayname"],
-        "givenname": request.headers["givenname"],
-        "uid": request.headers["uid"],
     }
 
     return shibboleth
